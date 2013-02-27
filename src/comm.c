@@ -2083,8 +2083,6 @@ static char *get_user_command()
 
         /* if there's a command in the buffer, pull it out! */
         if (ip->iflags & CMD_IN_BUF) {
-            NextCmdGiver++;
-            NextCmdGiver %= max_users;
             user_command = first_cmd_in_buf(ip);
             break;
         }
